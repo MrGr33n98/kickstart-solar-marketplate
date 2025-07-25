@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>New Campaign Created: <%= @campaign.name %></h1>
+    <p>
+      A new campaign has been created in the system.
+    </p>
+    <p>
+      Campaign details:
+      <ul>
+        <li><strong>Name:</strong> <%= @campaign.name %></li>
+        <li><strong>Description:</strong> <%= @campaign.description %></li>
+        <li><strong>Start Date:</strong> <%= @campaign.start_date %></li>
+        <li><strong>End Date:</strong> <%= @campaign.end_date %></li>
+      </ul>
+    </p>
+    <p>
+      You can view the campaign details by clicking <a href="<%= root_url %>campaigns/<%= @campaign.id %>">here</a>.
+    </p>
+  </body>
+</html>

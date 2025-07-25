@@ -1,22 +1,27 @@
 module Api
-  module V1
-    class AssessCampaignsController < ApplicationController
+  module V2
+    class AssessCampaignsController < BaseController
       before_action :set_assess_campaign, only: [:show, :update, :destroy]
 
       def index
-        @assess_campaigns = AssessCampaign.all
-        render json: @assess_campaigns
+        @assess_campaigns = AssessCampaign.includes(:leads).all
+        render json: @assess_campaigns, each_serializer: V2::AssessCampaignSerializer
       end
 
       def show
-        render json: @assess_campaign
+        render json: @assess_campaign, serializer: V2::AssessCampaignSerializer
       end
 
       def create
         result = AssessCampaigns::CreateService.call(params: params, user: current_user)
         
         if result[:success]
-          render json: result[:campaign], status: :created
+          # Notify admin users about new campaign
+          AdminUser.all.each do |admin|
+            NotificationJob.perform_later(admin.id, 'campaign_created', { campaign_id: result[:campaign].id })
+          end
+          
+          render json: result[:campaign], serializer: V2::AssessCampaignSerializer, status: :created
         else
           render json: { errors: result[:errors] }, status: :unprocessable_entity
         end
@@ -24,7 +29,7 @@ module Api
 
       def update
         if @assess_campaign.update(assess_campaign_params)
-          render json: @assess_campaign
+          render json: @assess_campaign, serializer: V2::AssessCampaignSerializer
         else
           render json: { errors: @assess_campaign.errors.full_messages }, status: :unprocessable_entity
         end
