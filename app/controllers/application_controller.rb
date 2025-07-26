@@ -1,5 +1,10 @@
 class ApplicationController < ActionController::Base
   include ActionController::MimeResponds
+<<<<<<< HEAD
+=======
+  include Pundit::Authorization
+  include ErrorHandler
+>>>>>>> de353b5bc3f511b55588bdba87798f869392d988
   
   before_action :set_paper_trail_whodunnit
   before_action :append_info_to_payload

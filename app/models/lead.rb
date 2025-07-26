@@ -9,7 +9,7 @@ class Lead < ApplicationRecord
   validates :phone, presence: true, format: { with: /\A\+?[\d\s\-\(\)]+\z/ }
   validates :name, presence: true
   
-  enum conversion_state: { new: 0, contacted: 1, qualified: 2, proposal: 3, won: 4, lost: 5 }
+  enum conversion_state: { created: 0, contacted: 1, qualified: 2, proposal: 3, won: 4, lost: 5 }
   
   # Filter profanity from these fields
   profanity_filter :name, :notes

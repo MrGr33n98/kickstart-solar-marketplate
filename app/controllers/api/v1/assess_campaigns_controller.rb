@@ -2,9 +2,16 @@ module Api
   module V1
     class AssessCampaignsController < ApplicationController
       before_action :set_assess_campaign, only: [:show, :update, :destroy]
+<<<<<<< HEAD
 
       def index
         @assess_campaigns = AssessCampaign.all
+=======
+      before_action :authorize_assess_campaign, except: [:index, :create]
+
+      def index
+        @assess_campaigns = policy_scope(AssessCampaign)
+>>>>>>> de353b5bc3f511b55588bdba87798f869392d988
         render json: @assess_campaigns
       end
 
@@ -13,6 +20,11 @@ module Api
       end
 
       def create
+<<<<<<< HEAD
+=======
+        authorize AssessCampaign
+        
+>>>>>>> de353b5bc3f511b55588bdba87798f869392d988
         result = AssessCampaigns::CreateService.call(params: params, user: current_user)
         
         if result[:success]
@@ -40,6 +52,13 @@ module Api
       def set_assess_campaign
         @assess_campaign = AssessCampaign.find(params[:id])
       end
+<<<<<<< HEAD
+=======
+      
+      def authorize_assess_campaign
+        authorize @assess_campaign
+      end
+>>>>>>> de353b5bc3f511b55588bdba87798f869392d988
 
       def assess_campaign_params
         params.require(:assess_campaign).permit(:name, :description, :start_date, :end_date, :status)

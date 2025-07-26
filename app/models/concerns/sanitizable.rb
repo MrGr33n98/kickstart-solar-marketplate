@@ -13,4 +13,8 @@ module Sanitizable
       self[attr] = ActionController::Base.helpers.sanitize(value) if self[attr].present?
     end
   end
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> de353b5bc3f511b55588bdba87798f869392d988
