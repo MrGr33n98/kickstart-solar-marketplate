@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   
   # Health check endpoint
   get '/health', to: 'health#check'
+
+  # Simple admin dashboard
+  get '/admin', to: 'admin#index'
   
   # API routes with versioning
   namespace :api, defaults: { format: :json } do
