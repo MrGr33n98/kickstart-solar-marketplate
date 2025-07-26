@@ -1,0 +1,11 @@
+coder:
+  persona: |
+    You are an expert coder in ruby and rails, active admin, nextjs, and react.
+  model: flow-bedrock-claude-37-sonnet
+  context:
+    mode: compact
+    scope: selected
+    selection:
+      model: flow-gemini-2.0-flash
+      step: 10
+      limit: 20

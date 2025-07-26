@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --solar-orange: #FF7A00;
+  --solar-green: #4CAF50;
+  --solar-blue: #2196F3;
+  --solar-gray: #F5F5F5;
+  
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+
+  --primary: 24 9 96;
+  --primary-foreground: 255 255 255;
+  --secondary: 255 122 0;
+  --secondary-foreground: 255 255 255;
+  --muted: 240 240 240;
+  --muted-foreground: 115 115 115;
+  --accent: 245 245 245;
+  --accent-foreground: 24 9 96;
+  --destructive: 255 0 0;
+  --destructive-foreground: 255 255 255;
+  --border: 230 230 230;
+  --input: 230 230 230;
+  --ring: 255 122 0;
+  --radius: 0.5rem;
+  --background: 255 255 255;
+  --foreground: 0 0 0;
+  --card: 255 255 255;
+  --card-foreground: 0 0 0;
+  --popover: 255 255 255;
+  --popover-foreground: 0 0 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  .solar-gradient {
+    @apply bg-gradient-to-r from-solar-orange to-solar-green;
+  }
+  
+  .solar-gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-solar-orange to-solar-green;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+}

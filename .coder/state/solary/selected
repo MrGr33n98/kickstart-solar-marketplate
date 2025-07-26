@@ -1,0 +1,10 @@
+rails-solar/app/controllers/api/v1/marketing_campaigns_controller.rb
+rails-solar/app/controllers/api/v1/assess_campaigns_controller.rb
+rails-solar/app/controllers/api/v1/categories_controller.rb
+rails-solar/app/controllers/api/v1/certifications_controller.rb
+rails-solar/app/controllers/api/v1/companies_controller.rb
+rails-solar/app/controllers/api/v1/contents_controller.rb
+rails-solar/app/controllers/api/v1/discussions_controller.rb
+rails-solar/app/controllers/api/v1/feature_groups_controller.rb
+rails-solar/app/controllers/api/v1/features_controller.rb
+rails-solar/app/controllers/api/v1/leads_controller.rb

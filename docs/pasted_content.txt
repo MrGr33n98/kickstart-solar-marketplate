@@ -1,0 +1,109 @@
+Aqui está um prompt otimizado para recriar o aplicativo SolarConnect usando o Bolt.new:
+
+```prompt
+**Objetivo:** Recriar o aplicativo SolarConnect - um marketplace de energia solar completo usando Bolt.new
+
+**Recursos Principais a Implementar:**
+1. Sistema de marketplace com:
+   - Listagem de empresas/produtos com filtros avançados (localização, segmento, avaliação)
+   - Páginas de perfil de empresa com abas (produtos, serviços, projetos)
+   - Sistema de avaliações e certificações
+
+2. Fluxo de cadastro de empresas com:
+   - Formulário multi-etapas responsivo
+   - Upload de imagens com preview
+   - Validação de dados e máscaras (CNPJ, CEP, telefone)
+   - Seção de certificações e segmentos
+
+3. Interface moderna com:
+   - Paleta solar (laranja #F97316, verde #22C55E, gradientes)
+   - Cards animados com hover effects
+   - Sistema de abas interativas
+   - Design totalmente responsivo
+
+4. Funcionalidades-chave:
+   - Busca inteligente com autocomplete
+   - Sistema de favoritos e comparação
+   - Integração com APIs de geolocalização
+   - Paginação e ordenação de resultados
+
+**Componentes Bolt.new Prioritários:**
+```bolt.new
+[HEADER]
+- Logo animado com ícone solar
+- Menu responsivo (mobile/desktop)
+- Barra de busca inteligente
+
+[HERO]
+- Título impactante + subtítulo
+- CTAs primários/secundários
+- Imagem flutuante com badge informativo
+
+[FILTROS]
+- Sistema de filtragem por:
+  • Tipo (empresa/produto)
+  • Localização (estado/cidade)
+  • Segmento (residencial/comercial)
+  • Avaliação (estrelas)
+- Botão "Aplicar Filtros"
+
+[RESULTADOS]
+- Cards de empresas:
+  • Logo
+  • Avaliação (estrelas)
+  • Tags de segmento
+  • Botões de ação
+- Cards de produtos:
+  • Imagem
+  • Preço
+  • Especificações
+  • Botão "Comprar"
+
+[PERFIL EMPRESA]
+- Cabeçalho com:
+  • Logo grande
+  • Métricas (anos mercado, projetos)
+  • Botões de contato
+- Sistema de abas:
+  • Sobre
+  • Produtos
+  • Projetos (galeria)
+  • Avaliações
+  • Contato (formulário + mapa)
+
+[CADASTRO EMPRESA]
+- Formulário multi-etapas:
+  1. Informações básicas (CNPJ, nome)
+  2. Localização (CEP, endereço)
+  3. Segmentos/serviços
+  4. Certificações
+  5. Upload de imagens
+  6. Termos e condições
+- Barra de progresso
+- Validação em tempo real
+
+[FOOTER]
+- Links úteis
+- Redes sociais
+- Newsletter
+- Informações legais
+```
+
+**Requisitos Técnicos:**
+- 100% responsivo (mobile-first)
+- Animações sutis em cards e elementos
+- SEO otimizado para termos de energia solar
+- Microinterações em botões e filtros
+- Performance otimizada (imagens lazy-loaded)
+
+**Paleta Visual:**
+- Cores primárias: #F97316 (laranja), #22C55E (verde)
+- Gradientes: laranja → verde
+- Tipografia: Poppins (Google Fonts)
+- Ícones: Font Awesome
+
+**Entrega Esperada:**
+Aplicação completa com todas as páginas interconectadas e fluxo de usuário completo desde a descoberta até o cadastro de empresas.
+```
+
+Este prompt inclui todos os elementos essenciais para reconstruir o SolarConnect no Bolt.new, com especificações claras sobre componentes, funcionalidades e design. Ele organiza as informações de forma estruturada para facilitar a implementação módulo por módulo.
